@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content = "height = device-height, width = 420, user-scalable = no" /> 
+	<title>Smart Home Network</title>
+	<script type="text/javascript" src="/webiopi.js"></script>
+	<script type="text/javascript">
+	webiopi().ready(function() {
+		var lightLivingRoomPart, lightMainRoomPart, lightRoom1Part, lightRoom2Part, lightToiletPart;
+		var curtainPart, fanPart;
+		var button;
+
+		lightLivingRoomPart = $("#lightLivingRoom");
+		lightMainRoomPart = $("#lightMainRoom");
+		lightRoom1Part = $("#lightRoom1");
+		lightRoom2Part = $("#lightRoom2");
+		lightToiletPart = $("#lightToilet");
+		curtainPart = $("#curtain");
+		fanPart = $("#fan");
+		               
+		// creating buttons for light, fan and curtain
+		button = webiopi().createMacroButton("livingRoomLightOn", "ON", "living_room_light_on");
+		lightLivingRoomPart.append(button); // append button to lightPart div
+		button = webiopi().createMacroButton("livingRoomLightOff", "OFF", "living_room_light_off");
+		lightLivingRoomPart.append(button);
+
+		button = webiopi().createMacroButton("mainRoomLightOn", "ON", "main_room_light_on");
+		lightMainRoomPart.append(button);
+		button = webiopi().createMacroButton("mainRoomLightOff", "OFF", "main_room_light_off");
+		lightMainRoomPart.append(button);
+
+		button = webiopi().createMacroButton("room1LightOn", "ON", "room1_light_on");
+		lightRoom1Part.append(button);
+		button = webiopi().createMacroButton("room1LightOff", "OFF", "room1_light_off");
+		lightRoom1Part.append(button);
+
+		button = webiopi().createMacroButton("room2LightOn", "ON", "room2_light_on");
+		lightRoom2Part.append(button);
+		button = webiopi().createMacroButton("room2LightOff", "OFF", "room2_light_off");
+		lightRoom2Part.append(button);
+
+		button = webiopi().createMacroButton("toiletLightOn", "ON", "toilet_light_on");
+		lightToiletPart.append(button);
+		button = webiopi().createMacroButton("toiletLightOff", "OFF", "toilet_light_off");
+		lightToiletPart.append(button);
+		
+		button = webiopi().createMacroButton("fanOn", "ON", "fan_on");
+		fanPart.append(button);      
+		button = webiopi().createMacroButton("fanOff", "OFF", "fan_off");
+		fanPart.append(button);
+
+		button = webiopi().createMacroButton("curtainUp", "UP", "curtain_up");
+		curtainPart.append(button);
+		button = webiopi().createMacroButton("curtainDown", "DOWN", "curtain_down");
+		curtainPart.append(button);
+	});
+	</script>
+	<style type="text/css">
+		button {
+			display: inline-block;
+			margin: 5px 5px 5px 5px;
+			width: 75px;
+			height: 75px;
+			font-size: 15pt;
+			font-weight: bold;
+			color: black;
+		}
+		
+		.main {
+			border: solid 7px #004D39;
+		}
+
+		#livingRoomLightOn {
+			background-color: #FF9999;
+		}
+		
+		#livingRoomLightOff {
+			background-color: #FF9999;
+		}
+
+		#mainRoomLightOn {
+			background-color: #FF9999;
+		}
+
+		#mainRoomLightOff {
+			background-color: #FF9999;
+		}
+
+		#room1LightOn {
+			background-color: #FF9999;
+		}
+
+		#room1LightOff {
+			background-color: #FF9999;
+		}
+
+		#room2LightOn {
+			background-color: #FF9999;
+		}
+
+		#room2LightOff {
+			background-color: #FF9999;
+		}
+
+		#toiletLightOn {
+			background-color: #FF9999;
+		}
+
+		#toiletLightOff {
+			background-color: #FF9999;
+		}		
+	
+		#fanOn {
+			background-color: #D9B3FF;
+		}
+
+		#fanOff {
+			background-color: #D9B3FF;
+		}
+
+		#curtainUp {
+			background-color: #FFFF66;
+		}
+
+		#curtainDown {
+			background-color: #FFFF66;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 60pt;
+			font-weight: bold;
+		}
+		h3 {
+			font-weight: bold;
+		}
+		h4 {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body style="background-color: #009973;">
+<h1>Smart Home Network</h1>
+<hr class="main">
+<h3>Light</h3>
+<hr style="border: solid 5px #FF9999;">
+<h4>Living Room</h4>
+<hr style="border: solid 2px #FF9999;">
+<div id="lightLivingRoom"></div>
+<h4>Main Room</h4>
+<hr style="border: solid 2px #FF9999;">
+<div id="lightMainRoom"></div>
+<h4>Alice's Room</h4>
+<hr style="border: solid 2px #FF9999;">
+<div id="lightRoom1"></div>
+<h4>Bob's Room</h4>
+<hr style="border: solid 2px #FF9999;">
+<div id="lightRoom2"></div>
+<h4>Toilet</h4>
+<hr style="border: solid 2px #FF9999;">
+<div id="lightToilet"></div>
+<h3>Curtain</h3>
+<hr style="border: solid 5px #FFFF66;">
+<div id="curtain"></div>
+<h4>Fan</h4>
+<hr style="border: solid 5px #D9B3FF;">
+<div id="fan"></div>
+</body>
+</html>
